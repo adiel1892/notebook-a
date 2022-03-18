@@ -5,11 +5,11 @@ void Notebook::write(unsigned int page, unsigned int row, unsigned int column, D
 
 }
 string Notebook::read(unsigned int page, unsigned int row, unsigned int column, Direction d ,unsigned int length){
-    return "";
+    return "notebook-a";
 }
 void Notebook::erase(unsigned int page, unsigned int row, unsigned int column,Direction d ,unsigned int length){
 
 }
 void Notebook::show(unsigned int page){
-    
+
 }
