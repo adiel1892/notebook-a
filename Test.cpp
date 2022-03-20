@@ -64,4 +64,11 @@ TEST_CASE("writing on a writen or deleaten place is illegal"){
     CHECK_THROWS(a.write(0,0,2, Direction::Vertical , "checking"));
     CHECK_THROWS(a.write(0,0,0, Direction::Vertical , "checking"));
     CHECK_THROWS(a.write(0,0,8, Direction::Vertical , "checking"));
+    a.write(0,4,0,Direction::Horizontal,"second line of notebook"); 
+    CHECK_THROWS(a.write(0,3,0, Direction::Vertical , "aba"));
+    CHECK_THROWS(a.write(0,3,10, Direction::Vertical , "aba"));
+    CHECK_THROWS(a.write(0,3,4, Direction::Vertical , "aba"));
+    CHECK_THROWS(a.write(0,3,6, Direction::Vertical , "aba"));
+    CHECK_THROWS(a.write(0,3,5, Direction::Vertical , "aba"));
+
 }
