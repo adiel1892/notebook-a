@@ -8,9 +8,9 @@ namespace ariel{
     class Notebook{
         private:
         public:
-        static void write(unsigned int page, unsigned int row, unsigned int column, Direction d ,string const& str);
-        static string read(unsigned int page, unsigned int row, unsigned int column, Direction d ,unsigned int length);
-        static void erase(unsigned int page, unsigned int row, unsigned int column,Direction d ,unsigned int length);
-        void show(unsigned int page);
+        static void write(int page, int row, int column, Direction d ,string const& str);
+        static string read(int page, int row, int column, Direction d ,int length);
+        static void erase(int page,int row,int column,Direction d ,int length);
+        void show(int page);
     };
 }

@@ -80,6 +80,12 @@ TEST_CASE("(page || column || string || row) not valid"){
     CHECK_THROWS(a.read(0,3,95, Direction::Horizontal , 6));
     CHECK_THROWS(a.read(0,3,101, Direction::Horizontal , 6));
     CHECK_THROWS(a.erase(0,3,101, Direction::Horizontal , 6));
+    CHECK_THROWS(a.read(-1,3,95, Direction::Horizontal , 6));
+    CHECK_THROWS(a.read(0,-3,101, Direction::Horizontal , 6));
+    CHECK_THROWS(a.erase(0,3,-2, Direction::Horizontal , 6));
+    CHECK_THROWS(a.read(0,3,-95, Direction::Horizontal , 6));
+    CHECK_THROWS(a.read(0,-3,50, Direction::Horizontal , 6));
+    CHECK_THROWS(a.erase(-4,3,10, Direction::Horizontal , 6));
 
 
 
