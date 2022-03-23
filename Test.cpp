@@ -37,8 +37,8 @@ TEST_CASE("Good Notebook"){
     CHECK(a.read(0,0,0,Direction::Horizontal,25) == "~~~~~~line of notebook___");
     a.erase(0,0,10,Direction::Horizontal,4);
     CHECK(a.read(0,0,0,Direction::Horizontal,25) == "~~~~~~line~~~~notebook___");
-    a.write(0,1,0,Direction::Vertical,"i'm writing vertical"); 
-    CHECK(a.read(0,0,0,Direction::Vertical,22) == "_i'm writing vertical_");
+    a.write(0,1,0,Direction::Vertical,"i'm writing vertival"); 
+    CHECK(a.read(0,0,0,Direction::Vertical,22) == "~i'm writing vertival_");
     CHECK(a.read(0,1,0,Direction::Horizontal,5) == "i____");
     CHECK(a.read(0,3,0,Direction::Horizontal,5) == "m____");
     CHECK(a.read(0,12,0,Direction::Horizontal,5) == " ____");
@@ -47,7 +47,6 @@ TEST_CASE("Good Notebook"){
     a.erase(0,0,3,Direction::Vertical,5);
     CHECK(a.read(0,0,3,Direction::Vertical,5) == "~~~~~");
     CHECK(a.read(0,1,0,Direction::Horizontal,5) == "i__~c");
-
 
 
 
